@@ -35,12 +35,12 @@ export const SocialLinks = () => {
           rel="noopener noreferrer"
           aria-label={`Follow us on ${link.icon.label}`}
           title={`Follow us on ${link.icon.label}`}
-          className="opacity-70 hover:opacity-100 transition-opacity duration-200 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-white/50 rounded p-1"
+          className="text-muted-foreground hover:text-foreground transition-colors duration-200 focus:text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1"
         >
           <img
             src={link.icon.src}
             alt={link.icon.label}
-            className="h-5 w-5 filter brightness-0 invert"
+            className="h-5 w-5 opacity-60 hover:opacity-100 transition-opacity"
           />
         </a>
       ))}

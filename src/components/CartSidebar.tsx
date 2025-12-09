@@ -77,11 +77,11 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
           {state.items.length === 0 ? (
             <div className="flex-1 flex items-center justify-center p-6">
               <div className="text-center">
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3 className="text-lg font-light text-foreground mb-2">
                   Your cart is empty
                 </h3>
-                <p className="text-muted-foreground mb-4">
-                  Add some products to start your purchase
+                <p className="text-muted-foreground text-sm mb-4">
+                  Add wellness products to begin
                 </p>
                 <Button onClick={onClose} variant="outline">
                   Continue Shopping
@@ -160,21 +160,19 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
               </div>
 
               {/* Order Summary */}
-              <div className="border-t p-6">
-                <div className="space-y-3">
-                  <div className="flex justify-between font-semibold text-lg">
-                    <span>Total</span>
-                    <span>${finalTotal.toFixed(2)}</span>
-                  </div>
+              <div className="border-t p-6 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Total</span>
+                  <span className="text-2xl font-light text-foreground">${finalTotal.toFixed(2)}</span>
                 </div>
 
                 <Button 
-                  className="w-full mt-4" 
+                  className="w-full" 
                   size="lg" 
                   onClick={handleCreateCheckout} 
                   disabled={isCreatingOrder}
                 >
-                  {isCreatingOrder ? 'Processing...' : 'Checkout'}
+                  {isCreatingOrder ? 'Processing...' : 'Proceed to Checkout'}
                 </Button>
               </div>
             </>
